@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block header %}
+	<base href="{{config["siteUrl"]}}">
+	<meta charset="UTF-8">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<link href="assets/img/0x0.png" rel="shortcut icon" >
+	<title>0X0</title>
+{% endblock %}
+{% block css %}
+	{{ css('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css',{nonce: nonce}) }}
+	{{css('css/style.css', {nonce: nonce})}}
+{% endblock %}
+</head>
+<body>
+{% block head %}
+	<div class="main-container">
+
+
+		<div style=" background: #434343; padding:1%; ">
+
+			<div class="ui container">
+
+				<div class="ui secondary inverted menu">
+					<a href="/" data-target="main .container" style=""><img class="ui medium circular image" src="assets/img/0x0.png" style="width:10%;height:100%;"></a>
+					<a href="/" data-target="main .container" class="active item">Accueil</a>
+					<p class="active item"></p>
+					<a href="/" data-target="main .container" class="active item">Présentation</a>
+					{{ _userInfo | raw }}
+				</div>
+
+			</div>
+
+		</div>
+
+		<main>
+			<div class="ui container">
+{% endblock %}
